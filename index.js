@@ -23,19 +23,29 @@ console.log(head);
 let numCol = head.length;
 console.log('Number of columns: ${numCol}');
 
-let twoDArray = rows.map(i => i.split(","));
+let twoDArray = rows.map(i => i.split(",")); //looping through the rows and splitting by commas//
 let catchtwoDArray = twoDArray;
 console.log(twoDArray);
 
-//Declare a variable that stores the number of columns in each row of data within the CSV.
-//Instead of hard-coding four columns per row, expand your code to accept any number of columns. This should be calculated dynamically based on the first row of data.//
+console.log("----")
+console.log("Part 3")
+console.log("----")
 
-//In JavaScript, arrays are indexed collections and objects are keyed collections.//
 
-// const titles = rows[0].split(",");
-// {
-// 	console.log(titles);        //much easier than the 308.3 method//
-// }
 
-// firstrow.push(dataColl[0][i].toLowerCase());
+//part3//
 
+//empty object array//
+
+let empty = []
+for (let i = 1; i < twoDArray.length; i++) {
+    let object = {}  
+  for (let c = 0; c < numCol; c++) {
+      object [head[c] ]= twoDArray [i] [c];
+       
+  }
+   empty.push(object)
+
+  
+}
+console.log(empty);
